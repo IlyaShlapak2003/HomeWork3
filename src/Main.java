@@ -64,9 +64,46 @@ public class Main {
                     default:
                         System.out.println("Такого месяца не существует.");
                 }
+                //Задание 6
+                int age =19;
+                int salary = 58_000;
+                if (age>=23) {
+                    if(salary>=50_000 && salary<80_000){
+                        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary*2)*1.2) + " рублей.");
+                    }
+                    else if(salary>=80_000){
+                        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary*2)*1.5) + " рублей.");
+                    }
+                }
+                else{
+                    if(salary>=50_000 && salary<80_000){
+                        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary*3)*1.2) + " рублей.");
+                    }
+                    else if(salary>=80_000){
+                        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ((salary*3)*1.5) + " рублей.");
+                    }
+                }
+                // Задача 7
+                int age1 =25;
+                int salary1 = 60_000;
+                int wantedSum = 330_000;
+                float percent = 10;
+                if (age1<23)
+                    percent+=1;
+                else if (age1<30 && age1>=23)
+                    percent+=0.5;
+                if (salary1>80_000)
+                    percent-=0.7;
+                float credit=wantedSum+wantedSum*(percent/100);
+                if (credit/(salary1/2)<=12)
+                    System.out.println("Максимальный платеж при ЗП " + salary1 + " равен " + (salary1/2) + " рублей. Платеж по кредиту " + (credit/12) + " рублей. Обобрено");
+                else System.out.println("Максимальный платеж при ЗП " + salary1 + " равен " + (salary1/2) + " рублей. Платеж по кредиту " + (credit/12) + " рублей. Отказано");
 
 
-            }
-        }
+
+
+
+    }
+}
 
 
